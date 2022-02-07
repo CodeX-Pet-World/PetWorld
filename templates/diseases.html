@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Logged In{% endblock %}
+{% block content %}
+
+<h3 align="center">Disease Database</h3>
+<div class="form-group">
+    <form method="POST">
+        <label for="text">Search for your Disease</label>
+        
+        <select id="pettype" name="pettype" onChange="getOption()">
+            <option value="cat" name="cat" >Cat</option>
+            <option value="dog" name="dog">Dog</option>
+            <option value="parrot" name="parrot">Parrot</option>
+            <option value="lovebirds" name="lovebirds">Love Birds</option>
+        </select>
+        <select id="symptoms" name="symptoms" onChange="getOption()">
+            {% for item in sym:%}
+                    <option  value="{{item}}">{{item}}</option>
+                {% endfor %}
+        </select>
+        
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px;margin-bottom: 10px;">Submit</button>
+    </form>
+    
+</div>
+
+{% endblock %}

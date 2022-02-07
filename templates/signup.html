@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Sign-Up{% endblock %}
+{% block content %}
+<form method="POST" action="signup">
+    <h3 align="center">Sign-Up</h3>
+    <div class="form-group">
+        <label for="email">Username</label>
+        <input type="name" class="form-control" id="name" name="username" placeholder="Enter Your Email...." />
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email...." />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" />
+    </div>
+    <div class="form-group">
+        <label for="c_password">Confirm Password</label>
+        <input type="password" class="form-control" id="c_password" name="c_password"
+            placeholder="Enter Confirm password" />
+    </div>
+    <button type="submit" class="btn btn-primary">Sign-Up</button>
+</form>
+
+{% endblock %}

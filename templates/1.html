@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Logged In{% endblock %}
+{% block content %}
+<form method="POST">
+    <select id="pettype" name="pettype" onChange="getOption()">
+        {% for item in diseases:%}
+                <option  value="{{item}}">{{item}}</option>
+            {% endfor %}
+    </select>
+</form>
+
+{% endblock %}
